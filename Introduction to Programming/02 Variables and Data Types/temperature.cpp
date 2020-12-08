@@ -9,9 +9,11 @@ int main () {
   cin >> temperature >> units;
   if (units == 'C' || units == 'c') {
     cout << (temperature / 5 * 9) + 32 << 'F' << endl;
+  } else if (units == 'F' || units == 'f') {
+    cout << (temperature - 32) * 5 / 9 << 'C' << endl;
   } else {
-    cout << (temperature - 32) * 5 / 9 << endl;
+    cout << "Unknown units, please specify C or F" << endl;
   }
-
+  
   return 0;
 }
